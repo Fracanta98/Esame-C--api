@@ -6,6 +6,10 @@ using Esame_rest_api.Classi;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+
 builder.Services.AddDbContext<StudentiContext>(
         options => options.UseSqlite("Data Source=Studenti.db") //crea il db
     );
@@ -17,6 +21,12 @@ builder.Services.AddDbContext<StudentiContext>(
 builder.Services.AddCors();
 
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 
 
@@ -44,7 +54,8 @@ app.MapPost("/aggiungicorso", (Corso corso, StudentiContext db) =>  //aggiungi u
 {
     db.Corsi.Add(corso);
     db.SaveChanges();
-    return Results.Created();
+    return Results.Created(); //problema da risolvere
+
 });
 
 app.MapGet("/studenti", (StudentiContext db) =>  //visualizza la lista degli studenti  USA DTO PER NON FAR VEDERE L'ID
