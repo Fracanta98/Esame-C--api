@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Desktop\\Esame-API\\Esame_rest_api\\Esame_rest_api\\Esame_rest_api.csproj": {}
+    "C:\\Users\\thefr\\OneDrive\\Desktop\\Esame-api\\Esame_rest_api\\Esame_rest_api\\Esame_rest_api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\Esame-API\\Esame_rest_api\\Esame_rest_api\\Esame_rest_api.csproj": {
+    "C:\\Users\\thefr\\OneDrive\\Desktop\\Esame-api\\Esame_rest_api\\Esame_rest_api\\Esame_rest_api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Esame-API\\Esame_rest_api\\Esame_rest_api\\Esame_rest_api.csproj",
+        "projectUniqueName": "C:\\Users\\thefr\\OneDrive\\Desktop\\Esame-api\\Esame_rest_api\\Esame_rest_api\\Esame_rest_api.csproj",
         "projectName": "Esame_rest_api",
-        "projectPath": "C:\\Users\\admin\\Desktop\\Esame-API\\Esame_rest_api\\Esame_rest_api\\Esame_rest_api.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\Esame-API\\Esame_rest_api\\Esame_rest_api\\obj\\",
+        "projectPath": "C:\\Users\\thefr\\OneDrive\\Desktop\\Esame-api\\Esame_rest_api\\Esame_rest_api\\Esame_rest_api.csproj",
+        "packagesPath": "C:\\Users\\thefr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thefr\\OneDrive\\Desktop\\Esame-api\\Esame_rest_api\\Esame_rest_api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thefr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

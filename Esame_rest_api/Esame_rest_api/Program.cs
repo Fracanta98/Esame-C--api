@@ -92,6 +92,31 @@ app.MapGet("/corsi/{nome}", (String nome, StudentiContext db) => //ricerca corso
 });
 
 
+app.MapDelete("/cancellastudente/{Id}", (int Id, StudentiContext db) =>
+{
+    Studente? s = db.Studenti.Find(Id);
+    if (s is null)
+        return Results.NotFound();
+
+    db.Studenti.Remove(s);
+    db.SaveChanges();
+    return Results.Ok();
+});
+
+
+
+app.MapDelete("/cancellacorso/{Id}", (int Id, StudentiContext db) =>
+{
+    Corso? c = db.Corsi.Find(Id);
+    if (c is null)
+        return Results.NotFound();
+
+    db.Corsi.Remove(c);
+    db.SaveChanges();
+    return Results.Ok();
+});
+
+
 
 
 app.Run();

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Esame_rest_api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf86377f243cc45fbaedcd03ab4c4c372384e7bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+808374a65923e8a9a405d16ba71a39e7e512e16b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Esame_rest_api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Esame_rest_api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
