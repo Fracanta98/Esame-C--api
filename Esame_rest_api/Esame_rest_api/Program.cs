@@ -118,6 +118,17 @@ app.MapDelete("/cancellacorso/{Id}", (int Id, StudentiContext db) =>
 
 
 
+app.MapGet("/studentecorsi/{Id}", (int Id, StudentiContext db) =>  //analogo alla ricerca studente ma restituisce solo i corsi
+{                                                            
+    Studente? s = db.Studenti.Find(Id);
+    if (s is null)
+        return Results.NotFound();
+
+    return Results.Ok(s.corsi);
+});
+
+
+
 
 app.Run();
 
