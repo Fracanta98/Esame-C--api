@@ -43,6 +43,46 @@ using (var scope = app.Services.CreateScope())
 app.UseHttpsRedirection();
 
 
+app.Use(async (context, next) =>   //middleware per autenticazione
+{
+    if (context.Request.Path == "/login")
+        await next.Invoke();
+    else
+    {
+        if (context.Request.Headers.TryGetValue("Access", out var valoreToken))
+        {
+            if (valoreToken == "Test")
+            {
+                await next.Invoke();
+            }
+            else
+            {
+                context.Response.StatusCode = StatusCodes.Status403Forbidden;
+                await context.Response.WriteAsync("Accesso negato: token non valido.");
+            }
+        }
+        else
+        {
+            context.Response.StatusCode = StatusCodes.Status403Forbidden;
+            await context.Response.WriteAsync("Accesso negato: token non presente.");
+        }
+    }
+});
+
+
+
+app.MapPost("/login", (Credenziali cred) =>
+{
+    if (string.IsNullOrWhiteSpace(cred.Password) || string.IsNullOrWhiteSpace(cred.Username))
+        return Results.BadRequest();
+
+    if (cred.Username == "Test" && cred.Password == "Test")
+        return Results.Ok(new { token = "Test" });
+
+    return Results.BadRequest();
+});
+
+
 app.MapPost("/aggiungistudente", (Studente studente, StudentiContext db) =>  //aggiungi studente
 {
     db.Studenti.Add(studente);
