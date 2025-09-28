@@ -94,7 +94,7 @@ app.MapPost("/aggiungicorso", (Corso corso, StudentiContext db) =>  //aggiungi u
 {
     db.Corsi.Add(corso);
     db.SaveChanges();
-    return Results.Created(); //problema da risolvere
+    return Results.Created(); 
 
 });
 
