@@ -71,7 +71,7 @@ app.Use(async (context, next) =>   //middleware per autenticazione
 
 
 
-app.MapPost("/login", (Credenziali cred) =>
+app.MapPost("/login", (Credenziali cred) =>  //validazione username e password 
 {
     if (string.IsNullOrWhiteSpace(cred.Password) || string.IsNullOrWhiteSpace(cred.Username))
         return Results.BadRequest();
